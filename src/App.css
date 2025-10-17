@@ -1,6 +1,50 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(56, 56, 56);
+  height: 100vh;
+}
+
+.geral {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  gap: 10px;  
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.input {
+  border-radius: 4px;
+  height: 36px;
+  width: 260px;
+  padding: 0px 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+.button {
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(100, 100, 100);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
 }
