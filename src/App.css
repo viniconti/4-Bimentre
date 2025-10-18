@@ -2,15 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 body {
-  background-color: rgb(56, 56, 56);
+  background-color: rgb(255, 250, 239);
   height: 100vh;
 }
 
 .geral {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh; 
@@ -23,25 +27,20 @@ body {
   gap: 20px;
 }
 
-
-.input {
-  border-radius: 4px;
-  height: 36px;
-  width: 260px;
-  padding: 0px 10px;
-
-  display: flex;
-  flex-direction: column;
+.h1{
+  font-size: 45px;
+  color: rgb(0, 0, 43);
 }
-
 
 .button {
   border-radius: 5px;
   cursor: pointer;
-  background-color: rgb(100, 100, 100);
-  color: white;
   border: none;
   padding: 10px 20px;
+
+  color: white;
+  background-color: rgb(100, 100, 100);
+  border: solid black 2px;
 }
 
 .register {
