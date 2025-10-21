@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import Imput from './Components/Input';
+import Input from './Components/Input';
 
 function App() {
 
@@ -15,7 +15,7 @@ function App() {
         <h1 className="h1">FORMULÁRIO</h1>
         <div className="container">
 
-          <Imput /> 
+          <Input /> 
 
           <div className="register">
             <button className="button" onChange={(e) => mudancadeTitulo(e)}>Register</button>

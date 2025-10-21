@@ -1,0 +1,26 @@
+.input {
+  border-radius: 4px;
+  padding: 8px 10px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.cima {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

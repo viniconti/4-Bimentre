@@ -1,63 +1,96 @@
 import React from "react";
-import "./Imput.css";
+import "./Input.css";
 
-function Imput() {
+function Input() {
   return (
     <>
       <div className="inputs">
         
-
-        <div className="topo">
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Nome</label>
         <input className="input" type="text" placeholder="Nome" />
-
-        <label htmlFor=""></label>
+        </div>
+          
+        <div className="cima">
+        <label htmlFor="">Data</label>
         <input className="input" type="date" />
+        </div>
+        </div>
+
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Teleone</label>
+        <input className="input" type="number" placeholder="Telefone" />
+        </div>
+        <div className="cima">
+        <label htmlFor="">Instagram</label>
+        <input className="input" type="text" placeholder="Instagram" />
+        </div>
         </div>
 
 
-        <label htmlFor=""></label>
-        <input className="input" type="number" placeholder="Telefone" />
-
-        <label htmlFor=""></label>
-        <input className="input" type="text" placeholder="Instagram" />
-
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">GitHub</label>
         <input className="input" type="text" placeholder="GitHub" />
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="cima">
+        <label htmlFor="">Pensamento</label>
         <input className="input" type="text" placeholder="Pensamento" />
+        </div>
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Problema</label>
         <input className="input" type="text" placeholder="Problema" />
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="cima">
+        <label htmlFor="">Última série</label>
         <input className="input" type="text" placeholder="Última séria" />
+        </div>
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Último jogo</label>
         <input className="input" type="text" placeholder="Último jogo" />
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="cima">
+        <label htmlFor="">Música favorita</label>
         <input className="input" type="text" placeholder="Música favorita" />
+        </div>
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Gênero</label>
         <input className="input" type="text" placeholder="Gênero" />
+        </div>
 
-        <label htmlFor=""></label>
-        <input
-          className="input"
-          type="text"
-          placeholder="Habilidade especial"
-        />
+        <div className="cima">
+        <label htmlFor="">Habilidade especial</label>
+        <input className="input"type="text"placeholder="Habilidade especial" />
+        </div>
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="linha">
+          <div className="cima">
+        <label htmlFor="">Poder especial</label>
         <input className="input" type="text" placeholder="Poder especial" />
+        </div>
 
-        <label htmlFor=""></label>
+        <div className="cima">
+        <label htmlFor="">Time que torce</label>
         <input className="input" type="text" placeholder="Time que torce" />
-
-      </div>
+        </div>
+        </div>
+        </div>
     </>
   );
 }
-export default Imput;
+export default Input;
