@@ -16,6 +16,10 @@ function App() {
 
   const enviarForms = (e) => {
     e.preventDefault()
+    fetch('htps://www.api.alanleiser.com/user',{
+      method:'POST',
+      body:JSON.stringify()
+    })
     console.log(`Email: ${email}, Senha: ${password}`)
   }
 
