@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(255, 234, 199);
   height: 100vh;
 }
 
@@ -18,13 +18,17 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; 
-  gap: 10px;  
+  gap: 20px;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border: solid 2px black;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgb(255, 247, 232);
 }
 
 .h1{
@@ -46,4 +50,16 @@ body {
 .register {
   display: flex;
   justify-content: center;
+}
+
+.registro {
+  display: flex;
+  flex-direction: column;
+}
+
+.cadastrar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
