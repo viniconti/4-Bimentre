@@ -11,7 +11,7 @@ function App() {
     setEmail(e.target.value);
   }
   const mudancaDePassword = (e) => {
-    setPassword(e.target.value);
+    setPassword(e.target.value); 
   }
 
   const enviarForms = (e) => {
@@ -36,38 +36,23 @@ function App() {
         <h1 className="h1">FORMULÁRIO</h1>
         <div className="container">
 
-          <Input />
+        <Input
+              label="Email"
+              placeholder="Digite seu email"
+              type="email"
+              value={email}
+              onChange={mudancaDeEmail}
+            />
+            
+        <Input
+              label="Senha"
+              placeholder="Digite sua senha"
+              type="password"
+              value={password}
+              onChange={mudancaDePassword}
+            />
 
-          <section className="cadastrar">
-            <h2>cadastro</h2>
-            <div>
-              <form onSubmit={enviarForms}>
-                <label htmlFor="email">Email</label>
-                <input className="registro"
-                  id="email"
-                  type="email"
-                  name="email"
-                  value={email}
-                  onChange={(e) => mudancaDeEmail(e)} />
-              </form>
-
-              <form onSubmit={enviarForms}>
-                <label htmlFor="password">Senha</label>
-                <input className="registro"
-                  id="password"
-                  type="password"
-                  name="password"
-                  value={password}
-                  onChange={(e) => mudancaDePassword(e)} />
-
-                <div className="register">
-                  <button className="button" type="submite">Cadastrar</button>
-                </div>
-
-              </form>
-
-            </div>
-          </section>
+        
 
         </div>
       </div>
