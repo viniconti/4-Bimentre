@@ -63,3 +63,9 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+.linha {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
