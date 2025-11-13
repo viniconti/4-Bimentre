@@ -8,7 +8,10 @@
 }
 
 body {
-  background-color: rgb(255, 234, 199);
+  background-image: url(../public/maximilian-meyer-PbpxXgqoCxE-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -25,15 +28,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: solid 2px black;
+  border: solid 2px #ffffff40;
   padding: 30px;
-  border-radius: 10px;
-  background-color: rgb(255, 247, 232);
+  border-radius: 20px;
+  background-color: #ffffff30;
+  backdrop-filter: blur(10px);
 }
 
 .h1{
   font-size: 45px;
-  color: rgb(0, 0, 80);
+  color: rgb(12, 1, 43);
 }
 
 .button {
@@ -68,4 +72,16 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
+}
+
+.myButton {
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: solid #ffffff30;
+  margin: 10px 0;
+  background-image: linear-gradient(45deg, #080036, #355b74);
+}
+::-webkit-input-placeholder {
+  color: rgb(39, 39, 39);
 }

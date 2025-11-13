@@ -85,7 +85,7 @@ function App() {
   return (
     <>
       <div className="geral">
-        <h1 className="h1">FORMULÁRIO</h1>
+
         <div className="container">
           <div className="linha">
             <Input
@@ -215,7 +215,7 @@ function App() {
             onChange={mudancaDePensamento}
           />
 
-          <button className="botao" onClick={enviarForms}>
+          <button className="myButton" onClick={enviarForms}>
             Enviar
           </button>
         </div>
