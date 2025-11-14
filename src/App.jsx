@@ -13,12 +13,14 @@ function App() {
   const [github, setGithub] = useState("");
   const [pensamento, setPensamento] = useState("");
   const [probleminha, setProbleminha] = useState("");
-  const [ultimaSeries, setUltimaSeries] = useState("");
+  const [ultimaSerie, setUltimaSerie] = useState("");
   const [musicaFavorita, setMusicaFavorita] = useState("");
   const [ultimoJogo, setUltimoJogo] = useState("");
   const [genero, setGenero] = useState("");
   const [habilidadeEspecial, setHabilidadeEspecial] = useState("");
   const [timeQueTorce, setTimeQueTorce] = useState("");
+  const [versiculo, setVersiculo] = useState("");
+  const [poderEspecial, setPoderEspecial] = useState("");
 
   const mudancaDeEmail = (e) => {
     setEmail(e.target.value);
@@ -47,8 +49,8 @@ function App() {
   const mudancaDeProbleminha = (e) => {
     setProbleminha(e.target.value);
   };
-  const mudancaDeUltimaSeries = (e) => {
-    setUltimaSeries(e.target.value);
+  const mudancaDeUltimaSerie = (e) => {
+    setUltimaSerie(e.target.value);
   };
   const mudancaDeMusicaFavorita = (e) => {
     setMusicaFavorita(e.target.value);
@@ -65,15 +67,13 @@ function App() {
   const mudancaDeTimeQueTorce = (e) => {
     setTimeQueTorce(e.target.value);
   };
-
-  const enviarForms = (e) => {
-    e.preventDefault();
-    fetch("https://www.api.alanleiser.com/user", {
-      method: "POST",
-      body: JSON.stringify(),
-    });
-    console.log(`Email: ${email}, Senha: ${password}`);
+  const mudancaDeVersiculo = (e) => {
+    setVersiculo(e.target.value);
   };
+  const mudancaDePoderEspecial = (e) => {
+    setPoderEspecial(e.target.value);
+  };
+
 
   useEffect(() => {
     fetch("https://www.api.alanleiser.com/")
@@ -82,10 +82,44 @@ function App() {
       .catch((error) => console.log("error"));
   }, []);
 
+    const onSubmitHandle = () => {
+      const body = {
+        name:nome,
+        age:idade,
+        phone:telefone,
+        instagram,
+        github,
+        thought:pensamento,
+        problem:probleminha,
+        lastSeries:ultimaSerie,
+        lastGame:ultimoJogo,
+        music:musicaFavorita,
+        genre:genero,
+        specialSkill:habilidadeEspecial,
+        specialPower:poderEspecial,
+        favoriteTeam:timeQueTorce,
+        bibleVerse:versiculo,
+        email,
+        password,
+      };
+      fetch("https://www.api.alanleiser.com/user",{
+        method:"POST",
+        body:JSON.stringify(body)
+      })
+      .then(res=>res.json)
+      .then(data=>{
+        console.log(data)
+      })
+      .catch(err=>{
+        console.log("err")
+        if(err.status === 400){
+          setUltimaSerie(true)
+        }
+      })
+    };
   return (
     <>
       <div className="geral">
-
         <div className="container">
           <div className="linha">
             <Input
@@ -126,7 +160,7 @@ function App() {
             <Input
               label="Telefone"
               placeholder="Digite seu telefone"
-              type="tel"
+              type="number"
               value={telefone}
               onChange={mudancaDeTelefone}
             />
@@ -168,8 +202,8 @@ function App() {
               label="Última Série"
               placeholder="Digite sua última série"
               type="text"
-              value={ultimaSeries}
-              onChange={mudancaDeUltimaSeries}
+              value={ultimaSerie}
+              onChange={mudancaDeUltimaSerie}
             />
           </div>
 
@@ -207,15 +241,32 @@ function App() {
             />
           </div>
 
+          <div className="linha">
+            <Input
+              label="Pensamento"
+              placeholder="Digite seu pensamento"
+              type="text"
+              value={pensamento}
+              onChange={mudancaDePensamento}
+            />
+            <Input
+              label="Versículo"
+              placeholder="Digite seu versículo"
+              type="text"
+              value={versiculo}
+              onChange={mudancaDeVersiculo}
+            />
+          </div>
+
           <Input
-            label="Pensamento"
-            placeholder="Digite seu pensamento"
+            label="Poder Especial"
+            placeholder="Digite seu poder especial"
             type="text"
-            value={pensamento}
-            onChange={mudancaDePensamento}
+            value={poderEspecial}
+            onChange={mudancaDePoderEspecial}
           />
 
-          <button className="myButton" onClick={enviarForms}>
+          <button className="myButton" onClick={onSubmitHandle}>
             Enviar
           </button>
         </div>
