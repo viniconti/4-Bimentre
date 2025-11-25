@@ -82,41 +82,46 @@ function App() {
       .catch((error) => console.log("error"));
   }, []);
 
-    const onSubmitHandle = () => {
-      const body = {
-        name:nome,
-        age:idade,
-        phone:telefone,
-        instagram,
-        github,
-        thought:pensamento,
-        problem:probleminha,
-        lastSeries:ultimaSerie,
-        lastGame:ultimoJogo,
-        music:musicaFavorita,
-        genre:genero,
-        specialSkill:habilidadeEspecial,
-        specialPower:poderEspecial,
-        favoriteTeam:timeQueTorce,
-        bibleVerse:versiculo,
-        email,
-        password,
-      };
-      fetch("https://www.api.alanleiser.com/user",{
-        method:"POST",
-        body:JSON.stringify(body)
-      })
-      .then(res=>res.json)
-      .then(data=>{
-        console.log(data)
-      })
-      .catch(err=>{
-        console.log("err")
-        if(err.status === 400){
-          setUltimaSerie(true)
-        }
-      })
+  const onSubmitHandle = () => {
+    const body = {
+      name: nome,
+      age: Number(idade),
+      phone: telefone,
+      instagram,
+      github,
+      thought: pensamento,
+      problem: probleminha,
+      lastSeries: String(ultimaSerie),
+      lastGame: String(ultimoJogo),
+      music: musicaFavorita,
+      genre: genero,
+      specialSkill: habilidadeEspecial,
+      specialPower: poderEspecial,
+      favoriteTeam: timeQueTorce,
+      bibleVerse: versiculo,
+      email,
+      password,
     };
+    
+  
+    console.log("BODY ENVIADO:", body);
+  
+    fetch("https://www.api.alanleiser.com/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(body)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log("RESPOSTA DA API:", data);
+    })
+    .catch(err => {
+      console.log("ERRO NO FETCH:", err);
+    });
+  };
+  
   return (
     <>
       <div className="geral">
