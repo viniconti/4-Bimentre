@@ -106,6 +106,7 @@ function App() {
   
     console.log("BODY ENVIADO:", body);
   
+    //method POST/
     fetch("https://www.api.alanleiser.com/user", {
       method: "POST",
       headers: {
